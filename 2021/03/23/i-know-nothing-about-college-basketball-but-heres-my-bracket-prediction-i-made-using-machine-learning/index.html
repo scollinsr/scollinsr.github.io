@@ -64,7 +64,7 @@
 
   <article class="article">
     
-    <span class="article-duration">27 min read</span>
+    <span class="article-duration">26 min read</span>
     
 
     <h1 class="article-title">I Know Nothing About College Basketball, But Heres The Bracket Prediction I Made Using Machine Learning</h1>
@@ -286,15 +286,6 @@ metrics(trainpredict, Outcome, .pred_class)</code></pre>
 
 playinresults &lt;- log_fit %&gt;% predict(new_data = playinresults, type=&quot;prob&quot;) %&gt;%
   bind_cols(playinresults)</code></pre>
-<pre class="r"><code>playinresults %&gt;% select(Team, .pred_class, Opponent, .pred_L) %&gt;% 
-  gt() %&gt;% 
-  opt_row_striping() %&gt;% 
-  opt_table_lines(&quot;none&quot;) %&gt;% 
-  tab_style(
-    style = cell_borders(sides = c(&quot;top&quot;, &quot;bottom&quot;), 
-                         color = &quot;grey&quot;, weight = px(1)),
-    locations = cells_column_labels(everything())
-  )</code></pre>
 <pre><code>## Warning: The `.dots` argument of `group_by()` is deprecated as of dplyr 1.0.0.
 ## This warning is displayed once every 8 hours.
 ## Call `lifecycle::last_warnings()` to see where this warning was generated.</code></pre>
@@ -722,15 +713,6 @@ playinresults &lt;- log_fit %&gt;% predict(new_data = playinresults, type=&quot;
 
 westresults &lt;- log_fit %&gt;% predict(new_data = westresults, type=&quot;prob&quot;) %&gt;%
   bind_cols(westresults)</code></pre>
-<pre class="r"><code>westresults %&gt;% select(Team, .pred_class, Opponent, .pred_L) %&gt;% 
-  gt() %&gt;% 
-  opt_row_striping() %&gt;% 
-  opt_table_lines(&quot;none&quot;) %&gt;% 
-  tab_style(
-    style = cell_borders(sides = c(&quot;top&quot;, &quot;bottom&quot;), 
-                         color = &quot;grey&quot;, weight = px(1)),
-    locations = cells_column_labels(everything())
-  )</code></pre>
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
@@ -1159,15 +1141,6 @@ westresults &lt;- log_fit %&gt;% predict(new_data = westresults, type=&quot;prob
 
 westroundtworesults &lt;- log_fit %&gt;% predict(new_data = westroundtworesults, type=&quot;prob&quot;) %&gt;%
   bind_cols(westroundtworesults)</code></pre>
-<pre class="r"><code>westroundtworesults %&gt;% select(Team, .pred_class, Opponent, .pred_L) %&gt;% 
-  gt() %&gt;% 
-  opt_row_striping() %&gt;% 
-  opt_table_lines(&quot;none&quot;) %&gt;% 
-  tab_style(
-    style = cell_borders(sides = c(&quot;top&quot;, &quot;bottom&quot;), 
-                         color = &quot;grey&quot;, weight = px(1)),
-    locations = cells_column_labels(everything())
-  )</code></pre>
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
@@ -1564,15 +1537,6 @@ westroundtworesults &lt;- log_fit %&gt;% predict(new_data = westroundtworesults,
 
 westroundthreeresults &lt;- log_fit %&gt;% predict(new_data = westroundthreeresults, type=&quot;prob&quot;) %&gt;%
   bind_cols(westroundthreeresults)</code></pre>
-<pre class="r"><code>westroundthreeresults %&gt;% select(Team, .pred_class, Opponent, .pred_L) %&gt;% 
-  gt() %&gt;% 
-  opt_row_striping() %&gt;% 
-  opt_table_lines(&quot;none&quot;) %&gt;% 
-  tab_style(
-    style = cell_borders(sides = c(&quot;top&quot;, &quot;bottom&quot;), 
-                         color = &quot;grey&quot;, weight = px(1)),
-    locations = cells_column_labels(everything())
-  )</code></pre>
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
@@ -1953,15 +1917,6 @@ westroundthreeresults &lt;- log_fit %&gt;% predict(new_data = westroundthreeresu
 
 westroundfourresults &lt;- log_fit %&gt;% predict(new_data = westroundfourresults, type=&quot;prob&quot;) %&gt;%
   bind_cols(westroundfourresults)</code></pre>
-<pre class="r"><code>westroundfourresults %&gt;% select(Team, .pred_class, Opponent, .pred_L) %&gt;% 
-  gt() %&gt;% 
-  opt_row_striping() %&gt;% 
-  opt_table_lines(&quot;none&quot;) %&gt;% 
-  tab_style(
-    style = cell_borders(sides = c(&quot;top&quot;, &quot;bottom&quot;), 
-                         color = &quot;grey&quot;, weight = px(1)),
-    locations = cells_column_labels(everything())
-  )</code></pre>
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
@@ -2327,7 +2282,7 @@ westroundfourresults &lt;- log_fit %&gt;% predict(new_data = westroundfourresult
 <p>It is now March 23, 2020 which means the tournament has been going on for a couple days now.</p>
 <p>Lets just say that my National Championship consisted of Iowa and Illinois, both of whom recently got knocked out in the second round.</p>
 <p>The one thing I will hold on to proudly is that my model correctly predicted each of the first rounds in the Midwest group.</p>
-<p>I don’t have the highest hopes for the rest of my bracket because my top 2 were knocked out, but (!) I am currently seated in the middle of my Sports Data class’s (a classroom filled with basketball nerds) fantasy bracket group. And this is all with an overfit model too…</p>
+<p>I don’t have the highest hopes for the rest of my bracket because my top two were knocked out, but (!) I am currently seated in the middle of my Sports Data class’s (a classroom filled with basketball nerds) fantasy bracket group. And this is all with an overfit model too…</p>
 <p>Here are pictures of my bracket currently:</p>
 <p><img src="images/Screen%20Shot%202021-03-23%20at%203.40.41%20PM.png" style="width:100.0%" /></p>
 <p><img src="images/Screen%20Shot%202021-03-23%20at%203.40.51%20PM.png" style="width:100.0%" /></p>
