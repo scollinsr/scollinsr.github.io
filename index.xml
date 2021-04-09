@@ -6,7 +6,18 @@
     <description>Recent content on Sam Collins&#39;s Github Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>March Madness Bracket Follow Up</title>
+      <link>/2021/04/09/march-madness-bracket-follow-up/</link>
+      <pubDate>Fri, 09 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/2021/04/09/march-madness-bracket-follow-up/</guid>
+      <description>As stated in my previous blog post, I created a march madness bracket without knowing a whole bunch about basketball.
+Now that the tournament is officially over, I can compare my predictions against the actual outcomes. The results were unfortunate, my model having a lot of faith in the Big 10–which I should have realized was a mistake from the start.
+But the most unfortunate thing was finding out that my model was overfit after I had already made my bracket.</description>
+    </item>
+    
     <item>
       <title>I Know Nothing About College Basketball, But Heres The Bracket Prediction I Made Using Machine Learning</title>
       <link>/2021/03/23/i-know-nothing-about-college-basketball-but-heres-my-bracket-prediction-i-made-using-machine-learning/</link>

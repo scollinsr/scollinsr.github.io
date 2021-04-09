@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Hugo 0.81.0" />
+
+
+<title>March Madness Bracket Follow Up - Sam Collins&#39;s Github Site</title>
+<meta property="og:title" content="March Madness Bracket Follow Up - Sam Collins&#39;s Github Site">
+
+
+  <link href='/favicon.ico' rel='icon' type='image/x-icon'/>
+
+
+
+  
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/fonts.css" media="all">
+<link rel="stylesheet" href="/css/main.css" media="all">
+
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="/images/logo.png"
+         width="50"
+         height="50"
+         alt="Logo">
+  </a>
+
+  <ul class="nav-links">
+    
+    <li><a href="/about/">About</a></li>
+    
+    <li><a href="https://github.com/scollinsr">GitHub</a></li>
+    
+    <li><a href="https://www.linkedin.com/in/collins-sam/">LinkedIn</a></li>
+    
+    <li><a href="https://twitter.com/snillocmas">Twitter</a></li>
+    
+  </ul>
+</nav>
+
+      </header>
+
+
+<main class="content" role="main">
+
+  <article class="article">
+    
+    <span class="article-duration">2 min read</span>
+    
+
+    <h1 class="article-title">March Madness Bracket Follow Up</h1>
+
+    
+    <span class="article-date">2021-04-09</span>
+    
+
+    <div class="article-content">
+      
+<script src="/2021/04/09/march-madness-bracket-follow-up/index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>As stated in my previous blog post, I created a march madness bracket without knowing a whole bunch about basketball.</p>
+<p>Now that the tournament is officially over, I can compare my predictions against the actual outcomes. The results were unfortunate, my model having a lot of faith in the Big 10–which I should have realized was a mistake from the start.</p>
+<p>But the most unfortunate thing was finding out that my model was overfit after I had already made my bracket. This is where all of my problems came from. My model was WAY too confident in predicting the training data, that the testing data was negatively impacted.</p>
+<p>Lets take a look at my final outcome of my bracket:</p>
+<p><img src="images/Screen%20Shot%202021-04-09%20at%2012.01.57%20PM.png" style="width:100.0%" /></p>
+<p><img src="images/Screen%20Shot%202021-04-09%20at%2012.02.07%20PM.png" style="width:100.0%" /></p>
+<p><img src="images/Screen%20Shot%202021-04-09%20at%2012.02.18%20PM.png" style="width:100.0%" /></p>
+<p>My model really started falling apart in the Sweet 16, where the upsets really happened.</p>
+<p>My model really did not think that UCLA was going to get as far as it did. And that was the problem. There was a lot of focus on the past performances of the teams–which usually can do a pretty good job at predicting–but it does not take into account team’s that all of a sudden become god-like and make it to the final four.</p>
+<p>There are a lot of external factors that a model cannot predict, like a player getting hurt or a miracle basket at the very last second.</p>
+<p>While machine learning is an amazing tool for prediction, it has not yet reached the capability of knowing the human aspect of sports–something I’m sure will improve as the years go on.</p>
+
+    </div>
+  </article>
+
+  
+
+
+</main>
+
+      <footer class="footer">
+        <ul class="footer-links">
+          <li>
+            <a href="/index.xml" type="application/rss+xml" target="_blank">RSS feed</a>
+          </li>
+          <li>
+            <a href="https://gohugo.io/" class="footer-links-kudos">Made with <img src="/images/hugo-logo.png" alt="Img link to Hugo website" width="22" height="22"></a>
+          </li>
+        </ul>
+      </footer>
+
+    </div>
+    
+
+    
+
+    
+  </body>
+</html>
+
