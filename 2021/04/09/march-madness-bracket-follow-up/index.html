@@ -59,7 +59,7 @@
 
   <article class="article">
     
-    <span class="article-duration">2 min read</span>
+    <span class="article-duration">3 min read</span>
     
 
     <h1 class="article-title">March Madness Bracket Follow Up</h1>
@@ -75,15 +75,34 @@
 
 <p>As stated in my previous blog post, I created a march madness bracket without knowing a whole bunch about basketball.</p>
 <p>Now that the tournament is officially over, I can compare my predictions against the actual outcomes. The results were unfortunate, my model having a lot of faith in the Big 10–which I should have realized was a mistake from the start.</p>
+<p>I ended up placing near the bottom of my class’s group of brackets, more specifically 12th out of 17.</p>
 <p>But the most unfortunate thing was finding out that my model was overfit after I had already made my bracket. This is where all of my problems came from. My model was WAY too confident in predicting the training data, that the testing data was negatively impacted.</p>
 <p>Lets take a look at my final outcome of my bracket:</p>
+<div id="west-and-south" class="section level2">
+<h2>West and South</h2>
 <p><img src="images/Screen%20Shot%202021-04-09%20at%2012.01.57%20PM.png" style="width:100.0%" /></p>
+<p>Because my model was overfit, it basically just chose all of the higher seed teams to win in the first round. So in the West you can see that the only one it missed was when Ohio beat out Virginia.</p>
+<p>In the South, 2 of the games my model missed were due to upsets. I believe the other two happened because each team had really good statistics in relevance to the other teams they were playing, and when faced with a different type of opponent, they struggled.</p>
+</div>
+<div id="east-and-midwest" class="section level2">
+<h2>East and Midwest</h2>
 <p><img src="images/Screen%20Shot%202021-04-09%20at%2012.02.07%20PM.png" style="width:100.0%" /></p>
+<p>The East follows the same pattern, the games that were wrong were the ones that resulted in upsets.</p>
+<p>The Midwest is the one that confuses me the most, because my model got it all right–including the upsets. My guess is that in the upset games, the winner was still the statistically stronger team regardless of the ranking.</p>
 <p><img src="images/Screen%20Shot%202021-04-09%20at%2012.02.18%20PM.png" style="width:100.0%" /></p>
-<p>My model really started falling apart in the Sweet 16, where the upsets really happened.</p>
-<p>My model really did not think that UCLA was going to get as far as it did. And that was the problem. There was a lot of focus on the past performances of the teams–which usually can do a pretty good job at predicting–but it does not take into account team’s that all of a sudden become god-like and make it to the final four.</p>
-<p>There are a lot of external factors that a model cannot predict, like a player getting hurt or a miracle basket at the very last second.</p>
-<p>While machine learning is an amazing tool for prediction, it has not yet reached the capability of knowing the human aspect of sports–something I’m sure will improve as the years go on.</p>
+<p>I think I got so many in the beginning because it was easy enough to say that the stronger team was going to win in the opening round, maybe even so in the second round. The problem started in the sweet sixteen when that was no longer the case.</p>
+<div id="my-feature-engineering-included" class="section level3">
+<h3>My feature engineering included:</h3>
+<p>Rolling_Mean_Possessions, Rolling_Mean_PPP, TeamTotalRebounds, TeamTurnovers, TeamSRS, TeamSOS, WinQuality</p>
+<p>All of which were specified for both team and opponent.</p>
+<p>These factors ended up being too highly correlated to eachother, causing the model to be overfit.</p>
+</div>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Looking back, I definitely would have changed up my feature engineering to ensure my model wasn’t over fit, maybe picking different statistics than total rebounds and turnovers– the two I think are the correlated ones.</p>
+<p>I think I could have done better if I had noticed the overfit model from the beginning, which would have caused me to completely change my model. But who really knows if it would have been better.</p>
+</div>
 
     </div>
   </article>
